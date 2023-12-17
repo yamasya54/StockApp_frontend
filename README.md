@@ -1,6 +1,6 @@
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h1 style="display: inline-block">Mern Stack Blog App</h1></summary>
+    <summary><h1 style="display: inline-block">Full Stack Stock App</h1></summary>
   </ul>
 </div>
 
@@ -15,30 +15,31 @@
   <tbody>
   <tr>
     <td> 
-      <li> React
-      <li> Node.js - Express.js
-      <li> MongoDB
+      <li> React  
       <li> Material UI
+      <li> Tailwind CSS
       <li> Redux / Toolkit
-      <li> React-router-dom    
+      <li> Database Authorization 
+      <li> React-router-dom  
+      <li> Database connected  
       <li> Custom hooks  
       <li> Axios instance
-      <li> Formik and Yup
-      <li> React-Toastify
     </td>
     <td>  <h4>Once you clone the project</h4>  
-
- 1) chnage directory `cd server`  and run  `npm install` or `yarn install` for node modules
- 2) run `nodemon` or `yarn start` to run server
- 3) chnage directory `cd client`  and run  `pnpm install` or `yarn install` for node modules
- 4) run `pnpm run dev` or `yarn run dev` for open development stage
+      
+ 1) run  `pnpm install`  or `yarn install` for node modules
+ 2) run `pnpm run dev` or `yarn run dev` for open development stage
+ 3) Login as a Admin `admin@site.com` - `aA?123456`
    </td>
     <td> <li> <a href="https://github.com/yamasya54" target="_blank">Take a look at my other projects</a> <li> <a href="https://www.linkedin.com/in/yavuz-amasya-3a314a26a" target="_blank">Visit me on Linkedin</a> 
   </tr>
   <tr>
     <td colspan="3"><h3>What is this project about ?</h3> 
 <p>
-The goal was to construct a blog post management system using Node.js and Express for the backend, with MongoDB serving as the database. JWT tokens were utilized to enhance security during user authentication processes, including registration and login functionalities. On the frontend, powered by React, the Material-UI library was seamlessly integrated to ensure a visually engaging and user-friendly design. React-Router played a pivotal role in enabling smooth page transitions, while the strategic use of Formik and Yup libraries streamlined form structuring and validation processes. The integration of React-Toastify further enriched user interactions by providing informative notifications. This project highlighted my proficiency in a comprehensive tech stack, encompassing Node.js, Express, MongoDB, React, Material-UI, JWT tokens, React-Router, Formik, and Yup, contributing to the successful development of an efficient and secure blog post management system.</p>
+This project is designed to help businesses efficiently manage their inventory. Users can easily add, view, update, and delete products in the database, providing comprehensive CRUD (Create, Read, Update, Delete) functionality.
+Additionally, users can track their profits over specific time periods, allowing for better financial analysis and decision-making.
+For administrative control, there's an admin panel that empowers administrators to oversee all user activities on the website and maintain control over user management.
+</p>
     </td>
   </tr>
       </tbody>
@@ -49,18 +50,14 @@ The goal was to construct a blog post management system using Node.js and Expres
 
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h2>How does my project look and Relational database management system</h2></summary>
+    <summary><h2>How does my project look</h2></summary>
   </ul>
 </div>
 
-[Live Link]()
 
+[Live Link](https://stock-app-frontend.onrender.com/)
 
-![blog app](https://github.com/AliDurul/MernStack_Blog-App/assets/80897590/a439c8f6-cf4e-4c19-bbd5-9c06b29788e2)
-
-
-
-
+![stockapp](https://github.com/AliDurul/FullStack-Stock-App/assets/80897590/26627259-cb60-47d9-bd50-8c64f7877254)
 
 <div id="user-content-toc">
   <ul align="left">
@@ -77,52 +74,71 @@ Thank you for visiting my project. I hope you have a wonderful experience explor
 ## Project Skeleton
 
 ```
-Blog App (folder)
+Movie App (folder)
 |
-|---- README.md
-|
-├── client
-|     ├── public
-|     ├── src
-|     |      ├── app
-|     |      ├── components
-|     |      ├── features
-|     |      ├── helper
-|     |      ├── hooks
-|     |      ├── img
-|     |      ├── pages
-|     |      ├── router
-|     |      ├── styles
-|     |      ├── App.jsx
-|     |      ├── index.css
-|     |      └── main.jsx
+|----readme.md    
+├── public
+│     └── _redirects
+|     └── favicon.png
+├── src
+|     ├── app
+|     |      ├── store.jsz
+|     ├──assets
+|     |      ├── favicon.png
+|     |      ├── loading.gif
+|     |      ├── no-result-found.avif
+|     |      ├── result.svg
+|     ├── components
+|     |      ├── BrandCard.jsx
+|     |      └── Charts.jsx
+|     |      └── FirmCard.jsx
+|     |      └── KpiCard.jsx
+|     |      └── MenuListItem.jsx
+|     |      └── ProductTable.jsx
+|     |      └── PurchaseTable.jsx
+|     |      └── RegisterForm.jsx
+|     |      └── SaleTable.jsx
+|     ├── features
+|     |      └── authSlice.js
+|     |      └── stockSlice.js
+|     ├── helper
+|     |      └── ToastNotify.js
+|     ├── hooks
+|     |      └── useAuthApiCall.js
+|     |      └── useAxios.js
+|     |      └── useStockCall.js
+|     ├── modals
+|     |      └── BrandsModal.jsx  
+|     |      └── FirmModal.jsx
+|     |      └── ProductModal.jsx
+|     |      └── PurchaseModal.jsx
+|     |      └── SaleModal.jsx
+|     ├── pages
+|     |      └── Brands.jsx
+|     |      └── Dashboard.jsx
+|     |      └── Firms.jsx
+|     |      └── Home.jsx
+|     |      └── Login.jsx
+|     |      └── Products.jsx
+|     |      └── Purchases.jsx
+|     |      └── Register.jsx
+|     |      └── Sales.jsx
+|     ├── router
+|     |      └── AppRouter.jsx
+|     |      └── PrivateRouter.jsx
+|     ├── styles
+|     |      └── globalStyles.js
 |     |
-|     ├── .env_example
-|     ├── .eslintrc.cjs
-|     ├── .gitignore
-|     ├── index.html
-|     ├── package.json
-|     ├── pnpm-lock.yaml
-|     ├── vercel.json
-|     └── vite.config.js
-|
-├── server
-|     ├── src
-|     |      ├── configs
-|     |      ├── controllers
-|     |      ├── helpers
-|     |      ├── middlewares
-|     |      ├── models
-|     |      └── routes
-|     |
-|     ├── .gitignore
-|     ├── blog app.png
-|     ├── index.js
-|     ├── package-lock.json
-|     ├── package.json
-|     ├── readme.md
-|     ├── vercel.json
-|     └── yarn.lock
-|
-└── README.md
+│     ├── App.js
+│     ├── main.jsx
+│     └── index.css
+├── package.json
+├── .env
+|── .gitignore
+|── index.html
+|── package.json
+|── pnpm-lock.yaml
+|── tailwind.config.js
+|── vite.config.js
+└── yarn.lock
 ```
